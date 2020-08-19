@@ -1,0 +1,298 @@
+/*RESET*/
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+   }
+   table { border-collapse: collapse; border-spacing: 0; }
+   td, th, caption { font-weight: normal; text-align: left; }
+   img, fieldset { border: 0; }
+   ol { padding-left: 1.4em; list-style: decimal; }
+   ul { padding-left: 1.4em; list-style:square; }
+   q:before, q:after { content:''; }
+/*FIN DEL RESET*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+header{
+	padding-top: 15px;
+}
+#contLogo{
+	height: 200px;
+	width: 118px;
+	margin: auto;
+}
+h1{
+	font-family: Detach;
+	font-size: 3em;
+	text-align: center;
+}
+#navBar{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-width: 80vw;
+	min-height: 6vh;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	background-color: white;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0px;
+}
+#mainListNav{
+	font-family: century gothic;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 1.5em;
+}
+#navBar li{
+	list-style: none;
+	text-align: center;
+	padding: 3px 7px;
+}
+#navBar li a{
+	text-decoration: none;
+	color: black;
+}
+#pagPrincipal{
+	background: url("../imgs/flechasFinanzas.png") no-repeat;
+	background-position: 90% 80%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	align-content: center;
+	height: 60vh;
+	padding-left: 5vw;
+}
+#pagPrincipal h2{
+	font-family: Detach;
+	font-size: 2.8em;
+	text-align: center;
+	width: 50%;
+}
+#pagPrincipal section{
+	width: 50%;
+	font-family: century gothic;
+	font-size: 1.5em;
+	text-align: center;
+}
+#pagPrincipal q{
+	background-color: #48EBFF;
+	width: 50%;
+	text-align: center;
+	font-style: italic;
+	font-size: 1.6em;
+}
+#trading{
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	background: url("../imgs/tradingFinal.jpg") center top no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 60vh;
+}
+#trading h2{
+	color: white;
+	font-family: Detach;
+	font-size: 3.3em;
+	margin-top: 5vh;
+	text-align: center;
+}
+.pTrading{
+	color: white;
+	font-family: century gothic;
+	font-size: 1.8em;
+	text-align: center;
+	width: 60%;
+}
+#botonCurso{
+	font-family: century gothic;
+	font-size: 2em;
+	background-color: white;
+	padding: 1vh 2vw;
+	border-radius: 40px;
+	border: none;
+	cursor: pointer;
+}
+#finanzas{
+	border-bottom: 2px solid black;
+	background: url("../imgs/backgroundFinanzas.PNG") no-repeat;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: flex-end;
+	padding-right: 5vw;
+	text-align: center;
+	
+}
+#finanzas h2{
+	font-family: Detach;
+	font-size: 3em;
+	width: 50%;
+}
+
+#finanzas p{
+	font-family: century gothic;
+	font-size: 1.8em;
+	text-align: center;
+	width: 50%;
+}
+.libros{
+	font-family: century gothic;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	visibility: hidden;
+}
+
+
+.botonHome{
+	border-bottom: 2px solid black;
+}
+
+.itemsOverStyle{
+	background-color: #CECECE;
+	border-radius: 30px;
+}
+
+#piePagina address{
+	text-align: center;
+	margin-top: 5px;
+	font-size: 1.1em;
+}
+#piePagina p{
+	text-align: center;
+	font-style: italic;
+	font-size: 1.05em;
+	padding-bottom: 5px;
+}
+#piePagina p a{
+	color: black;
+}
+#contacto h3{
+	font-family: century gothic;
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 30px;
+	box-sizing: border-box;
+}
+#contacto form{
+	width: 480px;
+	margin: auto;
+	background: rgba(0,0,0,0.3);
+	padding: 30px 20px 20px 20px;
+	box-sizing: border-box;
+	margin-top: 30px;
+	border-radius: 10px;
+}
+#contacto form input,textarea{
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 7px;
+	box-sizing: border-box;
+	font-size: 20px;
+}
+#contacto form textarea{
+	min-height: 180px;
+	max-height: 180px;
+	min-width: 100%;
+	max-width: 100%;
+	font-family: Helvetica;
+}
+#botonFormulario{
+	background-color: black;
+	color: white;
+	border: none;
+	height: 50px;
+	border-radius: 7px;
+}
+#botonFormulario:hover{
+	cursor: pointer;
+}
+#socialMedia{
+	margin-top: 30px;
+}
+#socialMedia a{
+	margin: 0 20px;
+}
+
+@media screen and (max-width:1600px){
+	#pagPrincipal{
+		background-image: none;
+		padding-left: 1px;
+	}
+	#pagPrincipal{
+		align-items: center;
+		
+	}
+	#pagPrincipal h2, #pagPrincipal section, #pagPrincipal q{
+		width: 80%;
+	}
+	#finanzas{
+		background-image: none;
+		align-items: center;
+	}
+	#finanzas p, #finanzas h2{
+		width: 80%;
+		font-size: 1.7em;
+	}
+	#trading h2{
+		width: 80%;
+		font-size: 2.8em;
+	}
+	.pTrading{
+		width: 90%;
+		font-size: 1.3em;
+	}
+}
+
+@media screen and (max-width:468px){
+	#mainListNav{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
+		width: 80%;
+		padding: 0;
+		text-align: center;
+	}
+	#pagPrincipal{
+		height: 80vh;
+	}
+	#trading{
+		height: 80vh;
+	}
+	#botonCurso{
+		font-size: 1.7em;
+	}
+	#finanzas{
+		height: 80vh;
+	}
+	#finanzas p{
+		font-size: 1.5em;
+		width: 90%;
+	}
+	.libros{
+		visibility: visible;
+	}
+	#contacto form{
+		width: 90vw;
+	}
+}
+@media screen and (max-width:348px){
+	html{
+		font-size: 80%
+	}	
+}
+

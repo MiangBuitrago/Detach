@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detach</title>
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+	<link rel="icon" href="imgs/detachIcon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+        @font-face {
+            font-family: Detach;
+            src: url("fonts/Hasthon.ttf");
+        }
+    </style>
+	<script>
+		
+		$(document).ready(function(){//Inicia Ready
+			
+			$("#navBar a span").addClass("botonHome");
+			
+			//estilos al clickear en la barra de navegación
+			$("#navBar a").click(function(){
+				$("#navBar a span").removeClass("botonHome");
+				$("#navBar a").removeClass("botonHome");
+				$(this).addClass("botonHome");
+			})
+			
+			//Estilo sobre barra de navegación
+			$("#navBar li").mouseover(function(){
+				$(this).css("background-color","#CECECE");
+				$(this).css("border-radius","30px");
+			});
+			$("#navBar li").mouseout(function(){
+				$(this).css("background-color","white");
+			});
+			
+			//Scroll Página
+			var tamañoPag = $(window).width();
+			if(tamañoPag > 468){
+				$("#navBar a").click(function(e){
+					e.preventDefault();
+					var linkPulsado = $(this).attr("href");
+					if(linkPulsado === "#finanzas" || linkPulsado === "#trading"){
+						$("html,body").animate({scrollTop:$(linkPulsado).offset().top-100},1000);
+					}else{
+						$("html,body").animate({scrollTop:$(linkPulsado).offset().top},1000);
+					}
+			});
+			}else{
+				$("#navBar a").click(function(e){
+					e.preventDefault();
+					var linkPulsado = $(this).attr("href");
+					$("html,body").animate({scrollTop:$(linkPulsado).offset().top},1000);
+			});
+			}
+			
+			//Animación barra adherida siempre
+			$(window).scroll(function(){
+				if($(this).scrollTop() > 288){
+					$("#navBar").css("border-bottom","2px solid black");
+				}else{
+					$("#navBar").css("border-bottom","none");
+				}
+			});
+			
+			$("#botonCurso").mouseover(function(){
+				$(this).css("background-color","#CECECE");
+			});
+			$("#botonCurso").mouseout(function(){
+				$(this).css("background-color","#FFF");
+			});	
+			
+		});//Termina Ready
+	</script>
+</head>
+	
+<body>
+    <header id="inicio">
+		<div id="contLogo">
+			<img src="imgs/LogoDetach200.png" alt="Detach">
+		</div>
+	  	<h1>DETACH</h1>
+    </header>
+    <nav id="navBar">
+        <ul id="mainListNav">
+            <li>
+				<a href="#inicio"><span>INICIO</span></a>
+			</li>
+			<li>
+				<a href="#trading">TRADING</a>
+			</li>
+			<li>
+				<a href="#finanzas">FINANZAS</a>
+			</li>
+			<li>
+				<a href="#contacto">CONTACTO</a>
+			</li>
+        </ul>
+    </nav>
+	<div id="pagPrincipal">
+		<h2>¿Qué es Detach?</h2>
+		<section>
+			<p>Detach, es una academia para aquellas personas que quieran aprender el trading y educación financiera, como una persona exitosa lo haría. Aquí te mostraremos recomendaciones y consejos que puedes aplicar en tu vida diaría para manejar mejor tu vida económica. </p>
+		</section>
+		<q>"La pobreza no se soluciona con dinero, se soluciona con educación financiera"</q>
+	</div>
+	<div id="trading">
+		<h2>¿Qué es para tí el trading?</h2>
+		<p class="pTrading">El trading, es conocido comúnmente como el arte de la compra y venta de acciones, en tiempo real. Estas inversiones, pueden ser en minutos, horas o dias. </p>
+		<p class="pTrading">En ésta página web, te enseñaremos los mejores trucos y tips que puedes aplicar al momento de estudiar esta forma de negocio que está revolucionando el mundo</p>
+		<input id="botonCurso" type="button" name="curso" value="Ir al curso">
+	</div>
+	<div id="finanzas">
+		<h2>¡APRENDE FINANZAS CON NOSOTROS!</h2>
+		<p>Aquí te enseñaremos a manejar tus finanzas de la manera más eficiente posible, para así poder lograr la libertad financiera que tanto deseas.</p>
+		<p>Por ahora, te dejo un par de libros, que recomendamos, para empezar en todo esto del cambio del habito financiero</p>
+		<ul class="libros">
+			<li>Los secretos de la mente millonaria. (T. Harv Eker)</li>
+			<li>Padre rico, padre pobre. (Robert Kiyosaki y Sharon Lechter)</li>
+		</ul>
+	</div>
+	<div id="contacto">
+		<h3>CONTACTO</h3>
+		<form action="mail.php" method="post">
+			<input type="text" name="nombre" placeholder="Nombre" required>
+			<input type="email" name="correo" placeholder="Correo Electrónico" required>
+			<input type="text" name="telefono" placeholder="Teléfono" required>
+			<textarea name="mensaje" placeholder="Escriba aquí su mensaje..." required></textarea>
+			<input type="submit" value="Enviar" id="botonFormulario">
+		</form>
+		<div id="socialMedia" align="center">
+			<a href="https://www.instagram.com/detach_academy/"><img src="imgs/igBlack32.png" alt="ig"></a>
+			<a href="#contacto"><img src="imgs/fbBlack32.png" alt="fb"></a>
+			<a href="#contacto"><img src="imgs/ytBlack32.png" alt="yt"></a>
+		</div>
+	</div>
+	<footer id="piePagina">
+		<address>&copy;Todos los derechos Reservados</address>
+		<p>Tecnología desarrollada por <a href="https://www.instagram.com/miguelbuitrago99/">MIANG</a></p>
+	</footer>
+</body>
+</html>
